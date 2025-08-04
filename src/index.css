@@ -29,10 +29,12 @@
     --secondary-foreground: 0 0% 100%;
     --secondary-hover: 199 95% 45%;
     --secondary-light: 199 85% 92%;
+    --secondary-dark: 199 95% 35%;
 
-    /* Accent - Soft Green */
-    --accent: 122 30% 92%;
-    --accent-foreground: 122 40% 25%;
+    /* Accent - Medical Blue */
+    --accent: 199 85% 95%;
+    --accent-foreground: 199 95% 25%;
+    --accent-blue: 199 95% 60%;
 
     /* Muted colors */
     --muted: 210 15% 96%;

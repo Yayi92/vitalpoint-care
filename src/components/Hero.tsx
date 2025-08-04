@@ -1,20 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Shield, Heart, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/medical-hero.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-light to-secondary-light">
-      <div className="container mx-auto px-4 py-20">
+    <section id="home" className="relative min-h-screen flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-secondary-light/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-accent-blue/10"></div>
+      </div>
+      
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
                 Your Health,
-                <span className="text-primary"> Our Priority</span>
+                <span className="text-primary"> Our </span>
+                <span className="text-secondary">Priority</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-foreground/90 leading-relaxed">
                 Providing exceptional healthcare services with compassion, expertise, and dedication. 
                 We're committed to your wellness journey with state-of-the-art facilities and 
                 personalized care.
@@ -77,14 +89,14 @@ const Hero = () => {
             </div>
             
             {/* Floating appointment card */}
-            <div className="absolute -bottom-6 -left-6 bg-background p-6 rounded-xl shadow-xl border">
+            <div className="absolute -bottom-6 -left-6 bg-background p-6 rounded-xl shadow-xl border border-secondary-light">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <Calendar className="h-6 w-6 text-primary-foreground" />
+                <div className="w-12 h-12 bg-gradient-to-r from-secondary to-accent-blue rounded-full flex items-center justify-center">
+                  <Calendar className="h-6 w-6 text-secondary-foreground" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Quick Booking</div>
-                  <div className="text-sm text-muted-foreground">Available today</div>
+                  <div className="text-sm text-secondary">Available today</div>
                 </div>
               </div>
             </div>

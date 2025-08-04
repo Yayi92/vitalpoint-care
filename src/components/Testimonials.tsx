@@ -66,7 +66,10 @@ const Testimonials = () => {
               <CardContent className="p-6">
                 <div className="space-y-4">
                   {/* Quote icon */}
-                  <Quote className="h-8 w-8 text-primary" />
+                  <Quote className={`h-8 w-8 ${
+                    index % 3 === 0 ? 'text-primary' : 
+                    index % 3 === 1 ? 'text-secondary' : 'text-accent-blue'
+                  }`} />
                   
                   {/* Rating stars */}
                   <div className="flex gap-1">
@@ -81,7 +84,10 @@ const Testimonials = () => {
                   </p>
 
                   {/* Service type */}
-                  <div className="inline-block px-3 py-1 bg-primary-light text-primary text-sm rounded-full">
+                  <div className={`inline-block px-3 py-1 text-sm rounded-full ${
+                    index % 3 === 0 ? 'bg-primary-light text-primary' : 
+                    index % 3 === 1 ? 'bg-secondary-light text-secondary' : 'bg-accent text-accent-foreground'
+                  }`}>
                     {testimonial.service}
                   </div>
 
@@ -92,8 +98,11 @@ const Testimonials = () => {
                         <p className="font-semibold text-foreground">{testimonial.name}</p>
                         <p className="text-sm text-muted-foreground">Age {testimonial.age}</p>
                       </div>
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                        <span className="text-primary-foreground font-semibold">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                        index % 3 === 0 ? 'bg-primary' : 
+                        index % 3 === 1 ? 'bg-secondary' : 'bg-accent-blue'
+                      }`}>
+                        <span className="text-white font-semibold">
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
