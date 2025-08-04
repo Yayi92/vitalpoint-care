@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import PremiumHeader from "@/components/PremiumHeader";
+import PremiumHero from "@/components/PremiumHero";
+import PremiumServices from "@/components/PremiumServices";
 import Schedule from "@/components/Schedule";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Services />
+      <PremiumHeader />
+      <PremiumHero />
+      <PremiumServices />
       <Schedule />
       <Testimonials />
       <FAQ />
